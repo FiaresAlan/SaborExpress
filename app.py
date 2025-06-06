@@ -16,6 +16,16 @@ def exibir_opcoes():
     print('3. Ativar restaurante')
     print('4. Sair\n')
 
+restaurantes = []
+def cadastrar_novo_restaurante():
+    os.system('cls')
+    print('Você escolheu cadastrar restaurante\n')
+    nome_do_restaurante = input('Qual será o nome do restaurante?\n Digite aqui: ')
+    restaurantes.append(nome_do_restaurante)
+    print(f'O restaurante {nome_do_restaurante} foi cadastrado com sucesso!\n')
+    input('Digite qualquer tecla p/ voltar ao menu principal: ')
+    main()
+
 def finalizar_app():
     os.system('cls')
     # os.system('clear') 
@@ -34,7 +44,7 @@ def escolher_opcao():
         # opcao_escolhida = int(opcao_escolhida)
 
         if opcao_escolhida == 1: 
-            print('Cadastrar restaurante')
+            cadastrar_novo_restaurante()
         elif opcao_escolhida == 2: 
             print('Listar restaurantes')
         elif opcao_escolhida == 3: 
